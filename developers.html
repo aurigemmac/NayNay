@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Developer Portal — NayNay</title>
+<meta name="description" content="Bring verified horse data into your platform. Integrate NayNay Connect to pull horse details, vaccination records, test results, and owner info for event registration." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a href="index.html" class="logo">NayNay</a>
+    <nav class="nav-links">
+      <a href="index.html#ecosystem">Ecosystem</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="developers.html">Developers</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke-linecap="round"/></svg>
+      </button>
+      <a href="#apply" class="nav-cta">Apply for Access</a>
+      <button class="nav-burger" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <a href="index.html" class="back-home">
+        <svg viewBox="0 0 18 18" fill="none"><path d="M11 3.5L5.5 9l5.5 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to home
+      </a>
+      <span class="eyebrow">For Developers</span>
+      <h1>Bring verified horse data into your platform.</h1>
+      <p class="lead">Give riders a one-click way to bring their horse's records — health, vaccinations, test results, and owner info — straight from NayNay into your registration flow. No re-uploaded paperwork, no chasing owners for documents.</p>
+      <div class="btn-row">
+        <a href="#apply" class="btn btn-primary">Apply for API Access</a>
+        <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Why integrate</span>
+        <h2>Built for show and race registration platforms.</h2>
+        <p>Every season, riders re-enter the same immunization records and test results into a different registration system. NayNay Connect lets them authorize once and share verified data directly from the source record — so your entry flow gets faster, and the paperwork gets more reliable.</p>
+      </div>
+      <div class="benefit-grid">
+        <div class="benefit-card">
+          <h3>Faster entries</h3>
+          <p>Riders connect their NayNay account instead of hunting down PDFs and re-typing information — fewer abandoned registrations, fewer support tickets about missing documents.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Verified, not re-typed</h3>
+          <p>Horse details, vaccination records, and test results come straight from NayNay's record, not a photo of a form — reducing errors and outdated documentation.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Owner info, ready to go</h3>
+          <p>Contact and ownership details needed for entry paperwork are shared with the rider's authorization, so you're not chasing down who to bill or contact.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how-it-works">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How it works</span>
+        <h2>From application to integration.</h2>
+      </div>
+      <div class="dev-steps">
+        <div class="dev-step">
+          <div class="dev-step-num">01</div>
+          <h3>Apply</h3>
+          <p>Create a developer account and tell us about your platform — what you're building and how you'll use horse and owner data.</p>
+        </div>
+        <div class="dev-step">
+          <div class="dev-step-num">02</div>
+          <h3>Get approved</h3>
+          <p>Our team reviews every integration for fit and reasonable use of horse and owner data before granting access.</p>
+        </div>
+        <div class="dev-step">
+          <div class="dev-step-num">03</div>
+          <h3>Add the button</h3>
+          <p>Drop the NayNay Connect snippet into your site — a single script tag and a button, styled to match your registration flow.</p>
+        </div>
+        <div class="dev-step">
+          <div class="dev-step-num">04</div>
+          <h3>Receive verified data</h3>
+          <p>When a rider authorizes, you receive their horse's details, records, and owner info directly — synced from the source, not re-typed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">The integration</span>
+        <h2>One button. Four data scopes.</h2>
+        <p>NayNay Connect is a drop-in SSO button. Riders sign in with their existing NayNay account and authorize exactly what your platform is requesting — nothing more.</p>
+      </div>
+
+      <div class="code-block">
+        <div class="code-block-head">
+          <span class="code-dot"></span><span class="code-dot"></span><span class="code-dot"></span>
+          <span class="code-filename">registration.html</span>
+        </div>
+        <pre><code>&lt;script src="https://connect.naynay.app/sdk.js" data-client-id="YOUR_CLIENT_ID"&gt;&lt;/script&gt;
+
+&lt;div id="naynay-connect"
+     data-scopes="horse_profile vaccination_records test_results owner_info"
+     data-redirect-uri="https://yourdomain.com/naynay/callback"&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+      <div class="scope-grid">
+        <div class="scope-card">
+          <span class="material-symbols-outlined scope-icon">badge</span>
+          <h3>horse_profile</h3>
+          <p>Breed, age, sex, color, and registration or pedigree numbers.</p>
+        </div>
+        <div class="scope-card">
+          <span class="material-symbols-outlined scope-icon">vaccines</span>
+          <h3>vaccination_records</h3>
+          <p>Current immunization history, including dates and expirations.</p>
+        </div>
+        <div class="scope-card">
+          <span class="material-symbols-outlined scope-icon">lab_research</span>
+          <h3>test_results</h3>
+          <p>Recent lab and diagnostic results, such as Coggins/EIA testing.</p>
+        </div>
+        <div class="scope-card">
+          <span class="material-symbols-outlined scope-icon">person</span>
+          <h3>owner_info</h3>
+          <p>Name and contact details needed to complete entry paperwork.</p>
+        </div>
+      </div>
+      <p class="dev-note">Riders see exactly which scopes your platform is requesting before they authorize, and can revoke access from their NayNay account at any time.</p>
+    </div>
+  </section>
+
+  <section class="section" id="apply" style="border-bottom:none;">
+    <div class="wrap">
+      <div class="callout-box" style="max-width:640px;margin:0 auto;text-align:center;">
+        <span class="eyebrow">Get started</span>
+        <h2 style="margin-bottom:14px;">Apply for developer access.</h2>
+        <p>Tell us about your platform, and our team will review your application for API access.</p>
+        <a href="#" class="btn btn-primary" style="margin-top:20px;">Create Developer Account</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">NayNay</a>
+        <p>The platform for the horse community — owners, barns, and the professionals who care for your horse, all working from the same record.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="index.html#ecosystem">Ecosystem</a>
+          <a href="index.html#features">Features</a>
+          <a href="index.html#pricing">Pricing</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="careers.html">Careers</a>
+        </div>
+        <div class="footer-col">
+          <h4>Developers</h4>
+          <a href="developers.html">Developer Portal</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-trust">
+      <span>Built with and alongside the equine community. &copy; 2026 NayNay. All rights reserved.</span>
+      <span class="footer-legal">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms and Conditions</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
