@@ -1,24 +1,24 @@
 /* ===================================================================
    NayNay Marketing Site — Shared Stylesheet
-   Light mode: clean SaaS baseline. Dark mode: matches the real
-   NayNay app's navy/teal tokens exactly.
+   Tokens mirror the shipped app's design system (steel-blue brand,
+   Outfit/Manrope type) — see NayNay_Design/design-source/design_handoff_foundations/tokens.json.
 =================================================================== */
 
 :root{
-  --radius-sm:8px; --radius-md:12px; --radius-lg:20px; --radius-full:999px;
+  --radius-sm:8px; --radius-md:16px; --radius-lg:24px; --radius-full:999px;
 
   /* Light mode (default) */
-  --bg:#F7FAFB;
+  --bg:#F1F5F9;
   --surface:#FFFFFF;
-  --surface-alt:#EFF5F6;
-  --border:#DCE8EA;
-  --border-strong:#B9D3D6;
-  --text:#0E1E2E;
-  --text2:#43606E;
-  --text3:#7391A0;
-  --teal:#0F6E56;
-  --teal-strong:#0A4F3E;
-  --teal-bg:#E2F0F0;
+  --surface-alt:#E2E9EF;
+  --border:#D8E0E9;
+  --border-strong:#B0BFCE;
+  --text:#192531;
+  --text2:#657687;
+  --text3:#93A2B0;
+  --teal:#3B6A94;
+  --teal-strong:#24466B;
+  --teal-bg:#E3ECF5;
   --amber:#8A5A00;
   --amber-bg:#FFF3E0;
   --red:#8A2020;
@@ -28,17 +28,17 @@
 }
 
 [data-theme="dark"]{
-  --bg:#0A1824;
-  --surface:#112030;
-  --surface-alt:#0D1E2C;
-  --border:rgba(255,255,255,0.09);
-  --border-strong:rgba(255,255,255,0.18);
-  --text:#E0EEF5;
-  --text2:#9AC0CE;
-  --text3:#6C93A2;
-  --teal:#3EC8DC;
-  --teal-strong:#A8E8F0;
-  --teal-bg:#0D2535;
+  --bg:#131C25;
+  --surface:#1A242F;
+  --surface-alt:#233140;
+  --border:#293748;
+  --border-strong:#3A4B60;
+  --text:#DDE4EC;
+  --text2:#8595A6;
+  --text3:#647689;
+  --teal:#8FBDE7;
+  --teal-strong:#C3DDF3;
+  --teal-bg:#1B2E42;
   --amber:#D4A040;
   --amber-bg:#2A1A00;
   --red:#E06060;
@@ -53,14 +53,14 @@ body{
   margin:0;
   background:var(--bg);
   color:var(--text);
-  font-family:'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size:16px;
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
   transition:background 0.25s ease, color 0.25s ease;
 }
 h1,h2,h3,h4{
-  font-family:'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight:700;
   line-height:1.15;
   margin:0;
@@ -102,8 +102,13 @@ button{ font-family:inherit; cursor:pointer; }
   border-bottom:1px solid var(--border);
 }
 .nav-row{ display:flex; align-items:center; justify-content:space-between; height:72px; }
-.logo{ display:flex; align-items:center; gap:9px; font-family:'DM Sans',sans-serif; font-weight:700; font-size:20px; }
+.logo{ display:flex; align-items:center; gap:9px; font-family:'Outfit',sans-serif; font-weight:700; font-size:20px; }
 .logo svg{ flex-shrink:0; }
+.logo-mark{
+  width:26px; height:26px; flex-shrink:0; background-color:currentColor;
+  -webkit-mask:url(images/naynay-logo-mark.png) center/contain no-repeat;
+  mask:url(images/naynay-logo-mark.png) center/contain no-repeat;
+}
 .nav-links{ display:flex; align-items:center; gap:32px; }
 .nav-links a{ font-size:14px; font-weight:500; color:var(--text2); transition:color 0.15s; display:inline-flex; align-items:center; gap:5px; }
 .nav-links a .material-symbols-outlined{ font-size:17px; }
@@ -139,7 +144,7 @@ button{ font-family:inherit; cursor:pointer; }
 }
 .btn:hover{ transform:translateY(-1px); }
 .btn-primary{ background:var(--teal); color:#fff; }
-[data-theme="dark"] .btn-primary{ color:#00302f; }
+[data-theme="dark"] .btn-primary{ color:#10151B; }
 .btn-secondary{ background:transparent; color:var(--text); border-color:var(--border-strong); }
 .btn-ghost-onDark{ background:rgba(255,255,255,0.1); color:#fff; border-color:rgba(255,255,255,0.35); }
 .btn-row{ display:flex; gap:14px; flex-wrap:wrap; }
@@ -148,7 +153,7 @@ button{ font-family:inherit; cursor:pointer; }
 .hero{
   position:relative; overflow:hidden; color:#fff;
   padding:180px 0 120px;
-  background:#0A1824;
+  background:#131C25;
 }
 .hero-bg{ position:absolute; inset:0; overflow:hidden; }
 .hero-bg video{
@@ -169,7 +174,7 @@ button{ font-family:inherit; cursor:pointer; }
 }
 .hero-bg::after{ content:''; position:absolute; inset:0; background:var(--overlay-scrim); }
 .hero-inner{ position:relative; z-index:2; max-width:720px; }
-.hero .eyebrow{ color:#8FE3E8; }
+.hero .eyebrow{ color:#A9C9E8; }
 .hero h1{ font-size:clamp(36px,6vw,60px); color:#fff; margin-bottom:22px; }
 .hero p.lead{ font-size:19px; color:rgba(255,255,255,0.82); max-width:560px; margin-bottom:36px; line-height:1.65; }
 
@@ -179,8 +184,8 @@ button{ font-family:inherit; cursor:pointer; }
 .eco-line{ stroke:var(--border-strong); stroke-width:1.5; }
 .eco-node circle{ fill:var(--surface); stroke:var(--border-strong); stroke-width:1.5; }
 .eco-node-center circle{ fill:var(--teal-bg); stroke:var(--teal); stroke-width:2; }
-.eco-node-title{ font-family:'DM Sans',sans-serif; font-size:13px; font-weight:700; fill:var(--teal-strong); }
-.eco-node-label{ font-family:'DM Sans',sans-serif; font-size:14px; font-weight:600; fill:var(--text); }
+.eco-node-title{ font-family:'Outfit',sans-serif; font-size:13px; font-weight:700; fill:var(--teal-strong); }
+.eco-node-label{ font-family:'Manrope',sans-serif; font-size:14px; font-weight:600; fill:var(--text); }
 
 .eco-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:16px; }
 .eco-card{
@@ -229,10 +234,13 @@ button{ font-family:inherit; cursor:pointer; }
 .shot-frame{ text-align:center; max-width:250px; }
 .shot-frame .phone{
   border-radius:32px; border:8px solid var(--surface); box-shadow:var(--shadow);
-  overflow:hidden; background:#0A1824;
+  overflow:hidden; background:#131C25;
 }
 [data-theme="dark"] .shot-frame .phone{ border-color:var(--surface-alt); }
 .shot-frame .phone img{ display:block; width:100%; }
+.shot-frame .phone img.shot-dark{ display:none; }
+[data-theme="dark"] .shot-frame .phone img.shot-light{ display:none; }
+[data-theme="dark"] .shot-frame .phone img.shot-dark{ display:block; }
 .shot-frame .cap{ margin-top:16px; font-size:14px; font-weight:600; color:var(--text2); }
 
 /* ---------------- Pricing ---------------- */
@@ -260,7 +268,7 @@ button{ font-family:inherit; cursor:pointer; }
   position:absolute; top:-13px; left:26px; font-size:11px; font-weight:700;
   background:var(--teal); color:#fff; padding:4px 12px; border-radius:var(--radius-full);
 }
-[data-theme="dark"] .price-badge{ color:#00302f; }
+[data-theme="dark"] .price-badge{ color:#10151B; }
 .price-card h3{ font-size:18px; margin-bottom:14px; }
 .price-amount{ font-size:22px; font-weight:700; color:var(--text); display:inline; }
 .price-period{ font-size:13px; color:var(--text3); display:inline; margin-left:3px; }
@@ -283,7 +291,7 @@ button{ font-family:inherit; cursor:pointer; }
   background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg);
   padding:28px 26px;
 }
-.testi-card p.quote{ font-family:'DM Sans',sans-serif; font-weight:600; font-size:18px; line-height:1.5; color:var(--text); margin-bottom:18px; }
+.testi-card p.quote{ font-family:'Outfit',sans-serif; font-weight:600; font-size:18px; line-height:1.5; color:var(--text); margin-bottom:18px; }
 .testi-meta{ display:flex; align-items:center; gap:10px; }
 .testi-avatar{
   width:38px; height:38px; border-radius:50%; background:var(--teal-bg); color:var(--teal-strong);
@@ -316,7 +324,7 @@ button{ font-family:inherit; cursor:pointer; }
 .footer-brand .logo{ margin-bottom:14px; }
 .footer-brand p{ font-size:13.5px; color:var(--text3); line-height:1.7; }
 .footer-cols{ display:flex; gap:56px; flex-wrap:wrap; }
-.footer-col h4{ font-family:'DM Sans',sans-serif; font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--text3); margin-bottom:14px; }
+.footer-col h4{ font-family:'Manrope',sans-serif; font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--text3); margin-bottom:14px; }
 .footer-col a{ display:block; font-size:14px; color:var(--text2); margin-bottom:10px; }
 .footer-col a:hover{ color:var(--teal); }
 .footer-social{ display:flex; gap:12px; margin-top:8px; }
@@ -348,7 +356,7 @@ button{ font-family:inherit; cursor:pointer; }
 .team-card{ text-align:center; }
 .team-avatar{
   width:88px; height:88px; border-radius:50%; margin:0 auto 16px; background:var(--teal-bg); color:var(--teal-strong);
-  display:flex; align-items:center; justify-content:center; font-size:26px; font-weight:700; font-family:'DM Sans',sans-serif;
+  display:flex; align-items:center; justify-content:center; font-size:26px; font-weight:700; font-family:'Outfit',sans-serif;
 }
 .team-name{ font-size:16px; font-weight:700; margin-bottom:4px; }
 .team-title{ font-size:13.5px; color:var(--text3); }
@@ -380,7 +388,7 @@ button{ font-family:inherit; cursor:pointer; }
   padding:24px 20px;
 }
 .dev-step-num{
-  font-family:'DM Sans',sans-serif; font-size:13px; font-weight:700; color:var(--teal-strong);
+  font-family:'Manrope',sans-serif; font-size:13px; font-weight:700; color:var(--teal-strong);
   background:var(--teal-bg); display:inline-flex; align-items:center; justify-content:center;
   width:32px; height:32px; border-radius:50%; margin-bottom:14px;
 }
@@ -390,7 +398,7 @@ button{ font-family:inherit; cursor:pointer; }
 @media(max-width:560px){ .dev-steps{ grid-template-columns:1fr; } }
 
 .code-block{
-  background:#0A1824; border-radius:var(--radius-lg); overflow:hidden; margin-bottom:36px;
+  background:#131C25; border-radius:var(--radius-lg); overflow:hidden; margin-bottom:36px;
   border:1px solid var(--border);
 }
 .code-block-head{
