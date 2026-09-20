@@ -217,43 +217,73 @@
       <div class="section-head center" style="margin-left:auto;margin-right:auto;">
         <span class="eyebrow">Pricing</span>
         <h2>Free to start. Built to scale with you.</h2>
-        <p>The same simple pricing whether you're an owner, a barn, or a professional — priced by how many horses you manage, not by role.</p>
+        <p>Whether you own a horse, run a barn, or work as a vet, farrier, or trainer — pricing here matches how you actually use NayNay.</p>
       </div>
 
-      <div class="pricing-toggle" role="group" aria-label="Billing period">
-        <button class="toggle-opt active" data-period="monthly">Monthly</button>
-        <button class="toggle-opt" data-period="annual">Annual <span class="save-badge">2 months free</span></button>
+      <div class="pricing-toggle" role="group" aria-label="Pricing for">
+        <button class="toggle-opt active" data-audience="owners">Owners</button>
+        <button class="toggle-opt" data-audience="barns">Barns</button>
+        <button class="toggle-opt" data-audience="pros">Pros</button>
       </div>
 
-      <div class="pricing-grid pricing-grid-two">
-        <div class="price-card">
-          <h3>Free</h3>
-          <div class="price-amount">$0</div>
-          <div class="price-period">forever</div>
-          <p>Every feature, for 1 horse. The same free tier whether you're an owner, a barn, or a professional.</p>
-        </div>
-        <div class="price-card price-featured">
-          <h3>Premium</h3>
-          <div class="price-scale">
-            <div class="price-scale-row">
-              <span class="price-scale-label">5 horses</span>
-              <span><span class="price-amount" data-monthly="$10" data-annual="$100">$10</span><span class="price-period" data-monthly="/mo" data-annual="/yr">/mo</span></span>
-            </div>
-            <div class="price-scale-row">
-              <span class="price-scale-label">25 horses</span>
-              <span><span class="price-amount" data-monthly="$50" data-annual="$500">$50</span><span class="price-period" data-monthly="/mo" data-annual="/yr">/mo</span></span>
-            </div>
-            <div class="price-scale-row">
-              <span class="price-scale-label">100 horses</span>
-              <span><span class="price-amount" data-monthly="$200" data-annual="$2,000">$200</span><span class="price-period" data-monthly="/mo" data-annual="/yr">/mo</span></span>
-            </div>
+      <div class="pricing-panel" data-audience-panel="owners">
+        <div class="pricing-grid">
+          <div class="price-card">
+            <h3>Free</h3>
+            <div class="price-amount">$0</div>
+            <div class="price-period">forever</div>
+            <p>1 horse, on us. No card required.</p>
           </div>
-          <p>Every feature included at every level. More than 100 horses? <a href="contact.html" style="color:var(--teal);font-weight:600;">Contact us</a> for custom pricing.</p>
+          <div class="price-card">
+            <h3>5 Horses</h3>
+            <div class="price-amount">$10</div><div class="price-period">/mo</div>
+            <div class="price-annual">or $100/yr (2 months free)</div>
+            <p>Photos upload at standard quality on this plan.</p>
+          </div>
+          <div class="price-card price-featured">
+            <span class="price-badge">Includes Media Upgrade</span>
+            <h3>25 Horses</h3>
+            <div class="price-amount">$20</div><div class="price-period">/mo</div>
+            <div class="price-annual">or $200/yr (2 months free)</div>
+            <p>Full photo quality, plus video, included on your plan.</p>
+          </div>
+        </div>
+        <p class="pricing-addon">More than 25 horses? <a href="contact.html?topic=other&amp;message=I%27m%20interested%20in%20custom%20pricing%20for%20more%20than%2025%20horses." style="color:var(--teal);font-weight:600;">Contact us</a> for custom pricing.</p>
+      </div>
+
+      <div class="pricing-panel" data-audience-panel="barns" hidden>
+        <div class="pricing-grid">
+          <div class="price-card">
+            <h3>Free</h3>
+            <div class="price-amount">$0</div>
+            <div class="price-period">forever</div>
+            <p>The same starting point as an Owner account — 1 horse, no card required.</p>
+          </div>
+          <div class="price-card">
+            <h3>Up to 5 Horses</h3>
+            <div class="price-amount">$10</div><div class="price-period">/mo</div>
+            <div class="price-annual">or $100/yr (2 months free)</div>
+            <p>Photos upload at standard quality on this plan.</p>
+          </div>
+          <div class="price-card price-featured">
+            <span class="price-badge">Includes Media Upgrade</span>
+            <h3>5+ Horses</h3>
+            <div class="price-amount">$200</div><div class="price-period">/mo</div>
+            <div class="price-annual">or $2,000/yr (2 months free)</div>
+            <p>One flat price for your whole barn. Full photo quality, plus video, included on your plan — plus up to 25 of your own personal horses.</p>
+          </div>
         </div>
       </div>
 
-      <p class="pricing-addon">Need more room for photos and videos? Add extra storage and higher-quality media anytime for +$10/mo.</p>
-      <p class="pricing-note">Pricing is per seat — barn managers and professionals can add staff as additional seats.</p>
+      <div class="pricing-panel" data-audience-panel="pros" hidden>
+        <div class="callout-box" style="max-width:640px;margin:0 auto;text-align:center;">
+          <span class="eyebrow">Vets, farriers, trainers &amp; other professionals</span>
+          <h3 style="margin-bottom:10px;">Free, unconditionally.</h3>
+          <p>There's no priced Pro tier, and none is planned. Every horse in your client network is free and never counts toward a limit — for you or for them. If you personally own more than one horse, those horses are billed on the Owner plan above, not as a Pro product.</p>
+        </div>
+      </div>
+
+      <p class="pricing-note">Staff are free — included with whichever barn they work at, at no extra charge.</p>
       <p class="pricing-close">No credit card required to get started.</p>
     </div>
   </section>

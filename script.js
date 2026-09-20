@@ -34,18 +34,21 @@
     if(link){ document.querySelector('.nav-links').classList.remove('mobile-open'); }
   });
 
-  // ---- Pricing toggle ----
+  // ---- Pricing audience toggle (Owners / Barns / Pros) ----
   document.addEventListener('click', function(e){
     var btn = e.target.closest('.toggle-opt');
     if(!btn) return;
-    var period = btn.getAttribute('data-period');
-    document.querySelectorAll('.toggle-opt').forEach(function(b){ b.classList.toggle('active', b === btn); });
-    document.querySelectorAll('.price-amount[data-monthly]').forEach(function(el){
-      el.textContent = el.getAttribute('data-' + period);
-    });
-    document.querySelectorAll('.price-period[data-monthly]').forEach(function(el){
-      el.textContent = el.getAttribute('data-' + period);
-    });
+    var group = btn.closest('.pricing-toggle');
+    if(group){
+      group.querySelectorAll('.toggle-opt').forEach(function(b){ b.classList.toggle('active', b === btn); });
+    }
+
+    var audience = btn.getAttribute('data-audience');
+    if(audience){
+      document.querySelectorAll('[data-audience-panel]').forEach(function(panel){
+        panel.hidden = panel.getAttribute('data-audience-panel') !== audience;
+      });
+    }
   });
 
   // ---- FAQ accordion ----
